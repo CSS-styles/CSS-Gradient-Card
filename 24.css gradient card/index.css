@@ -1,0 +1,113 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100%;
+	background-color: #262626FF;
+}
+div{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+	height: 350px;
+	width: 250px;
+	margin: 50px;
+	border-radius: 20px;
+	box-shadow: 1px 1px 60px black;
+	cursor: pointer;
+	overflow: hidden;
+}
+h1{
+	color: white;
+	font-size: 40px;
+}
+p{
+	font-size: 18px;
+	font-family: sans-serif;
+	color: white;
+	padding: 10px 15px;
+}
+div::before{
+	content: '';
+	display: block;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	bottom: 80%;
+	left: 80%;
+	border-radius: 50%;
+	z-index: -1;
+}
+.card1::before{
+	background-color: deeppink;
+}
+.card1:hover::before{
+	animation: slide1 0.5s linear forwards;
+}
+.card1:hover{
+	transition-property: all;
+	transition-delay: 0.5s;
+	box-shadow: 1px 1px 60px purple,
+				1px 1px 60px purple;
+}
+@keyframes slide1{
+	100%{
+		height: 350px;
+		width: 250px;
+		bottom: 0;
+		left: 0;
+		border-radius: 20px;
+		background: linear-gradient(45deg,deeppink,purple);
+	}
+}
+.card2::before{
+	background-color: lime;
+}
+.card2:hover::before{
+	animation: slide2 0.5s linear forwards;
+}
+.card2:hover{
+	transition-property: all;
+	transition-delay: 0.5s;
+	box-shadow: 1px 1px 60px green,
+				1px 1px 60px green;
+}
+@keyframes slide2{
+	100%{
+		height: 350px;
+		width: 250px;
+		bottom: 0;
+		left: 0;
+		border-radius: 20px;
+		background: linear-gradient(45deg,lime,green);
+	}
+}.card3::before{
+	background-color: dodgerblue;
+}
+.card3:hover::before{
+	animation: slide3 0.5s linear forwards;
+}
+.card3:hover{
+	transition-property: all;
+	transition-delay: 0.5s;
+	box-shadow: 1px 1px 60px royalblue,
+				1px 1px 60px royalblue;
+}
+@keyframes slide3{
+	100%{
+		height: 350px;
+		width: 250px;
+		bottom: 0;
+		left: 0;
+		border-radius: 20px;
+		background: linear-gradient(45deg,dodgerblue,royalblue);
+	}
+}
